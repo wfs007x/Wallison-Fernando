@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "986883819558",
+    "project_id": "doe-vida-4cfdc",
+    "storage_bucket": "doe-vida-4cfdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986883819558:android:bd8a1a87cc8aa0a450fee7",
+        "android_client_info": {
+          "package_name": "com.example.doevida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986883819558-k5pclfm0a37oev4hikb3m63c64khsle1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBLIKH1RIBJ2vrUuBSdKnLqHvEMUpodRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986883819558-k5pclfm0a37oev4hikb3m63c64khsle1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

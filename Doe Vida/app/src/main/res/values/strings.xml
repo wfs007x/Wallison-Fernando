@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">Doe Vida</string>
+
+    //Tela1 - Main
+    <string name="appName">DONATE LIFE!</string>
+    <string name="name">User</string>
+    <string name="pass">Password</string>
+    <string name="buttLogin">Login</string>
+    <string name="msgError" translatable="false">User or Password Invalid</string>
+
+
+    //Tela 2 - Intro
+    <string name="well" translatable="false">Hello! Welcome, </string>
+    <string name="introduction">Through this application, you will be able
+            to make donations to people who are in social vulnerability.
+            Click on the button below and donate life to those who need it most.
+    </string>
+    <string name="buttStar" translatable="false">Start</string>
+
+
+    //Tela 3 - Donat
+    <string name="NameDonat" translatable="false">Full Name</string>
+    <string name="Email" translatable="false">E-mail</string>
+    <string name="Phone" translatable="false">Phone</string>
+    <string name="Value" translatable="false">Value US$</string>
+    <string name="Inst" translatable="false">Institution</string>
+    <string name="buttintrodonate" translatable="false">Donate</string>
+
+
+</resources>
