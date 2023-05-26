@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.257" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/txtValueMoney"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"

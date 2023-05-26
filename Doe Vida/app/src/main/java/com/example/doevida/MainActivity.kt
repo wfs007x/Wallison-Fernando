@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         val vlogin = binding.btLogin
 
         vlogin.setOnClickListener {
-            if(vUser.text.toString() == "Wallison" && vPass.text.toString() == "123") {
+            if(vUser.text.toString() == "Wallison" && vPass.text.toString() == "Focus") {
                 val inten = Intent(this, intro::class.java)
                 val valtxtname = vUser.text.toString()
-                inten.putExtra("NameUser", valtxtname)
+                inten.putExtra("NameValue", valtxtname)
 
                 startActivity(inten)
             }

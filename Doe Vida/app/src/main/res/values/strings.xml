@@ -10,11 +10,12 @@
 
 
     //Tela 2 - Intro
-    <string name="well" translatable="false">Hello! Welcome, </string>
+    <string name="welcome" translatable="false">Hello! Welcome, </string>
     <string name="introduction">Through this application, you will be able
             to make donations to people who are in social vulnerability.
             Click on the button below and donate life to those who need it most.
     </string>
+    <string name="buttView" translatable="false">Donates</string>
     <string name="buttStar" translatable="false">Start</string>
 
 

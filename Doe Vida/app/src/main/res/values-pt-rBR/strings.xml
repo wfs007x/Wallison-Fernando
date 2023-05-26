@@ -9,11 +9,12 @@
     <string name="msgError" translatable="false">Usuário ou senha Inválida</string>
 
     //Tela 2
-    <string name="well" translatable="false">Olá! Bem vindo, </string>
+    <string name="welcome" translatable="false">Olá! Bem vindo, </string>
     <string name="introduction">Através dessa aplicação, você poderá realizar doações
             para pessoas que estão em vulnerabilidade social.
             Clique no botão abaixo e doe vida para quem mais precisa.
     </string>
+    <string name="buttView" translatable="false">Doações</string>
     <string name="buttStar" translatable="false">Iniciar</string>
 
 
@@ -24,11 +25,5 @@
     <string name="Value" translatable="false">Valor R$</string>
     <string name="Inst" translatable="false">Instituição</string>
     <string name="buttintrodonate" translatable="false">Doar</string>
-
-
-
-
-
-
 
 </resources>
