@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Tela 1
+    <string name="appName">¡DONA VIDA!</string>
+    <string name="name">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="buttLogin">Entrar</string>
+    <string name="msgError" translatable="false">usuario o contraseña invalido</string>
+
+    //Tela 2
+    <string name="welcome" translatable="false">¡Hola! Bienvenido, </string>
+    <string name="introduction">A través de esta aplicación se pueden realizar donaciones
+            para personas que se encuentran en vulnerabilidad social.
+            Haz clic en el botón de abajo y dona vida a quienes más lo necesitan.
+    </string>
+    <string name="buttView" translatable="false">Donaciones</string>
+    <string name="buttStar" translatable="false">Comenzar</string>
+
+
+    //Tela 3
+    <string name="NameDonat" translatable="false">Nombre Completo</string>
+    <string name="Email" translatable="false">E-mail</string>
+    <string name="Phone" translatable="false">Teléfono</string>
+    <string name="Value" translatable="false">Valor R$</string>
+    <string name="Inst" translatable="false">Institución</string>
+    <string name="buttintrodonate" translatable="false">Donar</string>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
