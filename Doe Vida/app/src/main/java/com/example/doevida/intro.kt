@@ -11,6 +11,10 @@ class intro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityIntroBinding.inflate(layoutInflater)
+
+        //Código para remover a ActionBar
+        supportActionBar?.hide()
+
         setContentView(binding.root)
 
         val btStar = binding.btStart

@@ -1,107 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Donat">
 
-    <EditText
-        android:id="@+id/txtInstDonat"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Inst"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
-
-    <EditText
-        android:id="@+id/txtEmailDonat"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
-
-    <EditText
-        android:id="@+id/txtValueMoney"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Value"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
-
-    <EditText
-        android:id="@+id/txtNameDonat"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/NameDonat"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
-
-    <EditText
-        android:id="@+id/txtPhoneDonat"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Phone"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
-
-    <Button
-        android:id="@+id/btDonate"
-        android:layout_width="227dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/buttintrodonate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
-
-    <TextView
-        android:id="@+id/txtAppNameIntro2"
-        android:layout_width="285dp"
-        android:layout_height="50dp"
-        android:focusable="auto"
-        android:fontFamily="sans-serif-black"
-        android:orientation="horizontal"
-        android:text="@string/appName"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true" android:layout_height="match_parent" android:layout_width="match_parent">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Donat">
+    
+        <TextView
+            android:id="@+id/txtAppNameIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:textSize="34sp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/appName"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+    
+        <EditText
+            android:id="@+id/txtNameDonat"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="70dp"
+            android:padding="15dp"
+            android:hint="@string/NameDonat"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAppNameIntro"/>
+    
+        <EditText
+            android:id="@+id/txtEmailDonat"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="13dp"
+            android:padding="15dp"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtNameDonat" />
+    
+    
+        <EditText
+            android:id="@+id/txtPhoneDonat"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="13dp"
+            android:padding="15dp"
+            android:hint="@string/Phone"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmailDonat" />
+    
+        <EditText
+            android:id="@+id/txtValueMoney"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="13dp"
+            android:padding="15dp"
+            android:hint="@string/Value"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPhoneDonat"
+             />
+    
+        <EditText
+            android:id="@+id/txtInstDonat"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="13dp"
+            android:padding="15dp"
+            android:hint="@string/Inst"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValueMoney" />
+    
+        <Button
+            android:id="@+id/btDonate"
+            android:background="@drawable/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="230dp"
+            android:text="@string/buttintrodonate"
+    
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInstDonat"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView> 

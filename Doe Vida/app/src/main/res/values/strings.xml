@@ -26,6 +26,15 @@
     <string name="Value" translatable="false">Value US$</string>
     <string name="Inst" translatable="false">Institution</string>
     <string name="buttintrodonate" translatable="false">Donate</string>
+    <string name="ErrorCad" translatable="false">Please fill out all fields!</string>
+
+    //Indicação de campos
+
+    <string name="hintname" translatable="false">Please enter a name!</string>
+    <string name="hintmail" translatable="false">Please enter an email!</string>
+    <string name="hintphone" translatable="false">Please enter a phone number!</string>
+    <string name="hintvalue" translatable="false">Please enter a value!</string>
+    <string name="hintinst" translatable="false">Please enter an institution!</string>
 
 
 </resources>

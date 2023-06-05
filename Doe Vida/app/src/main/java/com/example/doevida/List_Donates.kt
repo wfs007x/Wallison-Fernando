@@ -18,6 +18,9 @@ class List_Donates : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Código para remover a ActionBar
+        supportActionBar?.hide()
+
         setContentView(R.layout.activity_list_donates)
 
         empRecyclerView = findViewById(R.id.listVagas)
