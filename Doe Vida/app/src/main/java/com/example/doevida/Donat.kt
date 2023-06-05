@@ -14,9 +14,14 @@ class Donat : AppCompatActivity() {
     private lateinit var binding: ActivityDonatBinding
     private lateinit var dbRef: DatabaseReference
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDonatBinding.inflate(layoutInflater)
+
+        //Código para remover a ActionBar
+        supportActionBar?.hide()
+
         setContentView(binding.root)
 
         var cadDonName = binding.txtNameDonat
@@ -36,44 +41,52 @@ class Donat : AppCompatActivity() {
             val cadDonValuebt = cadDonValue.text.toString()
             val cadDonInstbt = cadDonInst.text.toString()
 
-
             if (cadDonNamebt.isEmpty()) {
-                cadDonName.error = "Por favor, insira um Nome"
+                cadDonName.error = resources.getString(R.string.hintname)
             }
             if (cadDonMailbt.isEmpty()) {
-                cadDonMail.error = "Por favor, insira um E-mail"
+                cadDonMail.error = resources.getString(R.string.hintmail)
             }
             if (cadDonPhonebt.isEmpty()) {
-                cadDonPhone.error = "Por favor, insira um Telefone"
+                cadDonPhone.error = resources.getString(R.string.hintphone)
             }
 
             if (cadDonValuebt.isEmpty()) {
-                cadDonValue.error = "Por favor, insira um Valor"
+                cadDonValue.error = resources.getString(R.string.hintvalue)
             }
 
             if (cadDonInstbt.isEmpty()) {
-                cadDonInst.error = "Por favor, insira uma Instituição"
+                cadDonInst.error = resources.getString(R.string.hintinst)
             }
 
-            val empId = dbRef.push().key!!
+            if (cadDonNamebt != "" && cadDonMailbt != "" && cadDonPhonebt != "" &&
+                cadDonValuebt != "" &&
+                cadDonInstbt != ""
+            ) {
 
-            val Doador = ModelDonate(cadDonNamebt, cadDonMailbt, cadDonPhonebt, cadDonValuebt, cadDonInstbt
-            )
+                val empId = dbRef.push().key!!
 
-            dbRef.child(empId).setValue(Doador)
-                .addOnCompleteListener {
-                    Toast.makeText(this, "Cadastro realizado", Toast.LENGTH_SHORT).show()
+                val Doador = ModelDonate(
+                    cadDonNamebt, cadDonMailbt, cadDonPhonebt, cadDonValuebt, cadDonInstbt
+                )
 
-                    cadDonName.text.clear()
-                    cadDonMail.text.clear()
-                    cadDonPhone.text.clear()
-                    cadDonValue.text.clear()
-                    cadDonInst.text.clear()
+                dbRef.child(empId).setValue(Doador)
+                    .addOnCompleteListener {
+                        Toast.makeText(this, "Cadastro realizado", Toast.LENGTH_SHORT).show()
 
-                }.addOnFailureListener { err ->
-                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
-                }
-            // setContentView(R.layout.activity_donat)
+                        cadDonName.text.clear()
+                        cadDonMail.text.clear()
+                        cadDonPhone.text.clear()
+                        cadDonValue.text.clear()
+                        cadDonInst.text.clear()
+
+                    }.addOnFailureListener { err ->
+                        Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
+                    }
+                // setContentView(R.layout.activity_donat)
+            } else {
+                Toast.makeText(this, R.string.ErrorCad, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

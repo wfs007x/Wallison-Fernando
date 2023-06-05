@@ -1,63 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".intro">
 
-    <TextView
-        android:id="@+id/txtAppNameIntro"
-        android:layout_width="285dp"
-        android:layout_height="50dp"
-        android:focusable="auto"
-        android:fontFamily="sans-serif-black"
-        android:orientation="horizontal"
-        android:text="@string/appName"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+    layout_height="match_parent"
+    layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/txtVarName"
-        android:layout_width="500dp"
-        android:layout_height="30dp"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".intro">
 
-    <Button
-        android:id="@+id/btStart"
-        android:layout_width="227dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/buttStar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        <TextView
+            android:id="@+id/txtAppNameIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appName"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="200dp"
+            android:layout_marginLeft="200dp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtIntro"
-        android:layout_width="500dp"
-        android:layout_height="80dp"
-        android:text="@string/introduction"
-        android:textAlignment="inherit"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        <TextView
+            android:id="@+id/txtVarName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:layout_constraintTop_toBottomOf="@id/txtAppNameIntro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:text="@string/introduction"
+            android:textAlignment="gravity"
+            android:textSize="19sp"
+            android:inputType="textMultiLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtVarName"/>
+
+        <Button
+            android:id="@+id/btViewDonates"
+            android:background="@drawable/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="230dp"
+            android:text="@string/buttView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtIntro"/>
+
+
+        <Button
+            android:id="@+id/btStart"
+            android:background="@drawable/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="230dp"
+            android:text="@string/buttStar"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btViewDonates"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>

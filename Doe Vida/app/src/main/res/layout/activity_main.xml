@@ -1,80 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-       tools:context=".MainActivity">
+<androidx.core.widget.NestedScrollView
+    layout_width="match_parent"
+    layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/txtName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        android:text="Wallison"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/txtpass"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/pass"
-        android:inputType="textPassword"
-        android:text="Focus"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/doevidaa2" />
 
-    <Button
-        android:id="@+id/btLogin"
-        android:layout_width="227dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/buttLogin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.747" />
+        <TextView
+            android:id="@+id/txtAppName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="auto"
+            android:fontFamily="sans-serif-black"
+            android:orientation="horizontal"
+            android:text="@string/appName"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="120dp"
+            app:layout_constraintEnd_toEndOf="@id/img"
+            app:layout_constraintStart_toStartOf="@id/img"
+            app:layout_constraintTop_toTopOf="@id/img"
+            app:layout_constraintBottom_toBottomOf="@id/img"/>
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="330dp"
-        android:layout_height="218dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068"
-        app:srcCompat="@drawable/doevidaa2" />
+        <EditText
+            android:id="@+id/txtName"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:padding="15dp"
+            android:hint="@string/name"
+            android:inputType="textPersonName|textCapSentences|textAutoCorrect"
+            android:text="Wallison"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img"/>
 
-    <TextView
-        android:id="@+id/txtAppName"
-        android:layout_width="285dp"
-        android:layout_height="50dp"
-        android:focusable="auto"
-        android:fontFamily="sans-serif-black"
-        android:orientation="horizontal"
-        android:text="@string/appName"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        <EditText
+            android:id="@+id/txtpass"
+            android:background="@drawable/edit_text"
+            android:drawableRight="@drawable/ic_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:padding="15dp"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:text="Focus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtName"/>
 
+        <Button
+            android:id="@+id/btLogin"
+            android:background="@drawable/edit_text"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="@string/buttLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtpass"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
